@@ -6,24 +6,27 @@
 
 
 def bubble_sort(unsorted_array)
+  loop do
+    original = unsorted_array.clone
+    index = 0
+    pair = [unsorted_array[index], unsorted_array[index + 1]]
 
-  
-  index = 0
-  pair = [unsorted_array[index], unsorted_array[index + 1]]
-
-  unsorted_array.each_with_index do |number, index| 
-    while index != unsorted_array.count - 1 do
-      if unsorted_array[index] > unsorted_array[index+1]
-        pair = [unsorted_array[index + 1], unsorted_array[index]]
-        unsorted_array[index] = pair[0]
-        unsorted_array[index + 1] = pair[1]
-      else
-        index += 1
+    unsorted_array.each_with_index do |number, index| 
+      while index != unsorted_array.count - 1 do
+        if unsorted_array[index] > unsorted_array[index+1]
+          pair = [unsorted_array[index + 1], unsorted_array[index]]
+          unsorted_array[index] = pair[0]
+          unsorted_array[index + 1] = pair[1]
+        else
+          index += 1
+        end
       end
     end
-  end 
-
-
+    if original == unsorted_array
+      break
+    end
+  end
+  return unsorted_array
 end
 
 
