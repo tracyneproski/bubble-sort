@@ -13,7 +13,7 @@ def bubble_sort(unsorted_array)
   pair = [unsorted_array[index], unsorted_array[index + 1]]
 
   unsorted_array.each_with_index do |number, index|
-    until index = unsorted_array.count do
+    while index != unsorted_array.count - 1 do
       if unsorted_array[index] > unsorted_array[index+1]
         pair = [unsorted_array[index + 1], unsorted_array[index]]
         unsorted_array[index] = pair[0]
@@ -24,7 +24,6 @@ def bubble_sort(unsorted_array)
     end
   end
 end
-
 
 
 # Check first and second number, if first is greater than second, switch.
