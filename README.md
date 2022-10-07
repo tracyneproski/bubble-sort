@@ -19,4 +19,4 @@ Ruby arrays, loops
 
 What I learned
 -
-Probably more math.
+More about loops and how they work. I also found .clone which was handy for comparing the original array to the sorted one.
