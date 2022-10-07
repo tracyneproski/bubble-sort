@@ -12,14 +12,13 @@ def bubble_sort(unsorted_array)
   index = 0
   pair = [unsorted_array[index], unsorted_array[index + 1]]
 
+  unsorted_array.each_with_index do |number, index|
   if unsorted_array[index] > unsorted_array[index+1]
     pair = [unsorted_array[index + 1], unsorted_array[index]]
-    unsorted_array.shift(pair[1])
+    unsorted_array[index] = pair[0]
+    unsorted_array[index + 1] = pair[1]
   else
     index += 1
-  end
-
-
   end
 end
 
